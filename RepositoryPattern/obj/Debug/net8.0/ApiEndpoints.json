@@ -1,0 +1,420 @@
+[
+  {
+    "ContainingType": "RepositoryPattern.Controllers.AuthensController",
+    "Method": "Login",
+    "RelativePath": "api/Authens/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Taikhoan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.AuthensController",
+    "Method": "Refresh",
+    "RelativePath": "api/Authens/refresh",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Req.TokenReq",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.AuthensController",
+    "Method": "Register",
+    "RelativePath": "api/Authens/Register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Taikhoan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.AuthensController",
+    "Method": "testLog",
+    "RelativePath": "api/Authens/testlog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Taikhoan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.CommentsController",
+    "Method": "newcmmt",
+    "RelativePath": "api/Comments/newCmmt",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Binhluan",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.HangPhimsController",
+    "Method": "addhp",
+    "RelativePath": "api/HangPhims/addHP",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Hangphim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.HangPhimsController",
+    "Method": "deletehp",
+    "RelativePath": "api/HangPhims/deleteHP",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Hangphim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.HangPhimsController",
+    "Method": "gethp",
+    "RelativePath": "api/HangPhims/getHP",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.HangPhimsController",
+    "Method": "getbyid",
+    "RelativePath": "api/HangPhims/GethpbyId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.HangPhimsController",
+    "Method": "updatehp",
+    "RelativePath": "api/HangPhims/updateHP",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Hangphim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.LoaiPhimsController",
+    "Method": "addlp",
+    "RelativePath": "api/LoaiPhims/addlp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Loaiphim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.LoaiPhimsController",
+    "Method": "Get",
+    "RelativePath": "api/LoaiPhims/getlp",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.LoaiPhimsController",
+    "Method": "updatelp",
+    "RelativePath": "api/LoaiPhims/updatelp",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Loaiphim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.PhimsController",
+    "Method": "deleteFilm",
+    "RelativePath": "api/Phims/deletephim",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phim",
+        "Type": "RepositoryPattern.Models.Phim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.PhimsController",
+    "Method": "getallphim",
+    "RelativePath": "api/Phims/getallphim",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.PhimsController",
+    "Method": "newphim",
+    "RelativePath": "api/Phims/newphim",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TenPhim",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnhPhim",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "NgayPhatHanh",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ThoiLuongPhim",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MoTa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdLP",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdHP",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TongSoTap",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.PhimsController",
+    "Method": "updateFilm",
+    "RelativePath": "api/Phims/updatephim",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "phim",
+        "Type": "RepositoryPattern.Models.Phim",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.ReviewsController",
+    "Method": "newreview",
+    "RelativePath": "api/Reviews/newreview",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Danhgia",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.TapPhimsController",
+    "Method": "newtapphim",
+    "RelativePath": "api/TapPhims/newtapphim",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "RepositoryPattern.Models.Req.TapPhimReq",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.TapPhimsController",
+    "Method": "get",
+    "RelativePath": "api/TapPhims/tapphimbyId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.TestsController",
+    "Method": "newphim",
+    "RelativePath": "api/Tests/add",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TenPhim",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AnhPhim",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      },
+      {
+        "Name": "NgayPhatHanh",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      },
+      {
+        "Name": "ThoiLuongPhim",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "MoTa",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdLP",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "IdHP",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "TongSoTap",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RepositoryPattern.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[RepositoryPattern.WeatherForecast, RepositoryPattern, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

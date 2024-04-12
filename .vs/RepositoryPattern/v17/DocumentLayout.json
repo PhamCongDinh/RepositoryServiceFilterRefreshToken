@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\fpt\\RepositoryPattern\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54D41A48-707F-4133-B26C-7D7ABD09FCD8}|RepositoryPattern\\RepositoryPattern.csproj|c:\\fpt\\repositorypattern\\repositorypattern\\repository\\authenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D41A48-707F-4133-B26C-7D7ABD09FCD8}|RepositoryPattern\\RepositoryPattern.csproj|solutionrelative:repositorypattern\\repository\\authenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D41A48-707F-4133-B26C-7D7ABD09FCD8}|RepositoryPattern\\RepositoryPattern.csproj|c:\\fpt\\repositorypattern\\repositorypattern\\services\\authenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D41A48-707F-4133-B26C-7D7ABD09FCD8}|RepositoryPattern\\RepositoryPattern.csproj|solutionrelative:repositorypattern\\services\\authenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D41A48-707F-4133-B26C-7D7ABD09FCD8}|RepositoryPattern\\RepositoryPattern.csproj|c:\\fpt\\repositorypattern\\repositorypattern\\repository\\iauthenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D41A48-707F-4133-B26C-7D7ABD09FCD8}|RepositoryPattern\\RepositoryPattern.csproj|solutionrelative:repositorypattern\\repository\\iauthenrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 243,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthenRepository.cs",
+              "DocumentMoniker": "C:\\fpt\\RepositoryPattern\\RepositoryPattern\\Repository\\AuthenRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryPattern\\Repository\\AuthenRepository.cs",
+              "ToolTip": "C:\\fpt\\RepositoryPattern\\RepositoryPattern\\Repository\\AuthenRepository.cs",
+              "RelativeToolTip": "RepositoryPattern\\Repository\\AuthenRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T09:31:14.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAuthenRepository.cs",
+              "DocumentMoniker": "C:\\fpt\\RepositoryPattern\\RepositoryPattern\\Repository\\IAuthenRepository.cs",
+              "RelativeDocumentMoniker": "RepositoryPattern\\Repository\\IAuthenRepository.cs",
+              "ToolTip": "C:\\fpt\\RepositoryPattern\\RepositoryPattern\\Repository\\IAuthenRepository.cs",
+              "RelativeToolTip": "RepositoryPattern\\Repository\\IAuthenRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T09:30:33.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthenService.cs",
+              "DocumentMoniker": "C:\\fpt\\RepositoryPattern\\RepositoryPattern\\Services\\AuthenService.cs",
+              "RelativeDocumentMoniker": "RepositoryPattern\\Services\\AuthenService.cs",
+              "ToolTip": "C:\\fpt\\RepositoryPattern\\RepositoryPattern\\Services\\AuthenService.cs",
+              "RelativeToolTip": "RepositoryPattern\\Services\\AuthenService.cs",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAowH0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T09:30:13.204Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
