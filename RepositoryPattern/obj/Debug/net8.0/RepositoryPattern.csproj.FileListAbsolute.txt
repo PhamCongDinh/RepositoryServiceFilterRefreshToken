@@ -139,3 +139,4 @@ C:\fpt\RepositoryPattern\RepositoryPattern\obj\Debug\net8.0\RepositoryPattern.pd
 C:\fpt\RepositoryPattern\RepositoryPattern\obj\Debug\net8.0\RepositoryPattern.genruntimeconfig.cache
 C:\fpt\RepositoryPattern\RepositoryPattern\obj\Debug\net8.0\ref\RepositoryPattern.dll
 C:\fpt\RepositoryPattern\RepositoryPattern\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\fpt\RepositoryPattern\RepositoryPattern\obj\Debug\net8.0\RepositoryPattern.sourcelink.json

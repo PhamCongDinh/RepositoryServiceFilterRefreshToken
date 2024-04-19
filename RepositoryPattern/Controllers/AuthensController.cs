@@ -18,26 +18,6 @@ namespace RepositoryPattern.Controllers
             _auth = auth;
         }
 
-
-        [HttpPost("Login")]
-        public IActionResult Login([FromBody] Taikhoan req)
-        {
-            var result = _auth.Login(req);
-
-            if (result.Status == 200)
-            {
-                return Ok(new { token = result.Token });
-            }
-            else if (result.Status == 404)
-            {
-                return NotFound(new { message = "User not found" });
-            }
-            else
-            {
-                return StatusCode(500, new { message = "Internal Server Error" });
-            }
-        }
-
         WebphimonlineContext db = new WebphimonlineContext();
         [ServiceFilter(typeof(testFilter))]
 
@@ -47,6 +27,10 @@ namespace RepositoryPattern.Controllers
             var check = db.Taikhoans.FirstOrDefault(x => x.Email == req.Email);
             var accessToken = _auth.GenerateAccessToken(req);
             var refresToken = _auth.GenerateRefreshToken();
+            if (check  == null)
+            {
+                return BadRequest("Email exist!");
+            }
             check.RefreshToken = refresToken;
             db.Taikhoans.Update(check);
             db.SaveChanges();
@@ -91,6 +75,5 @@ namespace RepositoryPattern.Controllers
                 return StatusCode(500, ex.Message);
             }
         }
-
     }
 }

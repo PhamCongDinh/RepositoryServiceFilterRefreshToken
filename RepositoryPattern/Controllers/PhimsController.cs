@@ -5,6 +5,7 @@ using RepositoryPattern.Models;
 using RepositoryPattern.Models.Req;
 using RepositoryPattern.Repository;
 using RepositoryPattern.Services;
+using System.Net.Http.Headers;
 
 namespace RepositoryPattern.Controllers
 {
@@ -24,42 +25,16 @@ namespace RepositoryPattern.Controllers
         }
         [HttpGet("getallphim")]
         public ActionResult getallphim()
-        {
-            var lst = phimRepos.GetPhims();
-            return new JsonResult(new { message = "success", data = lst });
+        {          
+                var lst = phimRepos.GetPhims();
+                return Ok(new { message = "success", data = lst });         
         }
 
 
 
 
-        //[HttpPost("newphim")]
-        //public async Task<IActionResult> newphim([FromForm] PhimReq req)
-        //{
-        //    var phim = new Phim
-        //    {
-        //        TenPhim = req.TenPhim,
-        //        IdHangPhim = req.IdHP,
-        //        IdLp = req.IdLP,
-        //        MoTa= req.MoTa,
-        //        TongSoTap = req.TongSoTap,
-        //        NgayPhatHanh = req.NgayPhatHanh,
-
-        //    };
-        //    if (req.AnhPhim != null)
-        //    {
-        //        var imageName = req.AnhPhim.FileName;
-        //        var imagePath = Path.Combine("C:\\fpt\\QLwebphim\\Primeng\\src\\assets\\images", imageName);
-        //        using (var stream = new FileStream(imagePath, FileMode.Create))
-        //        {
-        //            await req.AnhPhim.CopyToAsync(stream);
-        //        }
-        //        phim.AnhPhim = imageName;
-        //    }
-        //    phimRepos.Add(phim);
-        //    return new JsonResult(new {message = "success", data = phim, status=200 });
-        //}
-
-
+       
+        
         [HttpPost("newphim")]
         public async Task<IActionResult> newphim([FromForm] PhimReq req)
         {
@@ -85,7 +60,7 @@ namespace RepositoryPattern.Controllers
             }
             pser.Create(phim);
 
-            return new JsonResult(new { message = "success", data = phim, status = 200 });
+            return Ok(new { message = "success", data = phim, status = 200 });
         }
 
 
@@ -95,14 +70,14 @@ namespace RepositoryPattern.Controllers
         public ActionResult updateFilm(Phim phim)
         {
             phimRepos.Update(phim);
-            return new JsonResult(new {message = "success", data = phim});
+            return Ok(new {message = "success", data = phim});
         }
 
         [HttpDelete("deletephim")]
         public ActionResult deleteFilm(Phim phim)
         {
             phimRepos.Delete(phim);
-            return new JsonResult(new {message="success", data = phim});
+            return Ok(new {message="success", data = phim});
         }
     }
 }

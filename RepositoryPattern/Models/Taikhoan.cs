@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace RepositoryPattern.Models;
 
@@ -10,9 +11,9 @@ public partial class Taikhoan
     public string? TenTk { get; set; }
 
     public string? MatKhau { get; set; }
-
-    public string? Email { get; set; } 
-
+    //[EmailAddress]
+    public string? Email { get; set; }
+    [RegularExpression("^[0-9]*$", ErrorMessage = "Chi duoc nhap số")]
     public int LoaiTk { get; set; }
     public string? RefreshToken {  get; set; }
     public virtual ICollection<Binhluan> Binhluans { get; set; } = new List<Binhluan>();

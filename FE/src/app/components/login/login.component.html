@@ -1,0 +1,27 @@
+<section>
+    <div class="form-box" style="height: 550px;">
+        <div class="form-value">
+            <form #formdata="ngForm" (ngSubmit)="login(formdata)">
+                <h2>Đăng nhập</h2>
+
+                <div class="inputbox">
+                    <input type="email" id="email" name="email" ngModel required>
+                    <label for="">Email</label>
+                </div>
+                <div class="inputbox">
+                    <input type="password" id="matkhau" name="matkhau" ngModel required>
+                    <label for="">Mật Khẩu</label>
+                </div>
+
+                <div class="forget">
+                    <label for=""><a href="#">Quên mật khẩu</a></label>
+                </div>
+                <button type="submit" id="login">Đăng nhập</button>
+                <div class="register">
+                    <p>Chưa có tài khoản <a>Đăng ký</a></p>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>

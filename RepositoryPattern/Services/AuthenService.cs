@@ -19,47 +19,6 @@ namespace RepositoryPattern.Services
             this.config = config;
         }
        
-        public (int Status, string? Token) Login(Taikhoan req)
-        {
-            try
-            {
-                var user = _auth.GetTaikhoan(req.Email, req.MatKhau);
-
-                if (user != null)
-                {
-                    
-                    var key = config["Jwt:Key"];
-                    var signkey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
-                    var sign = new SigningCredentials(signkey, SecurityAlgorithms.HmacSha256);
-                    var token = new JwtSecurityToken(
-                        issuer: config["Jwt:Iss"],
-                        audience: config["Jwt:Aud"],
-                        expires: DateTime.Now.AddMinutes(1),
-                        claims: new[]
-                        {
-                    new Claim("userId", user.Id.ToString())
-                        },
-                        signingCredentials: sign);
-                    var tokenlog = new JwtSecurityTokenHandler().WriteToken(token);
-                    return (200, tokenlog);
-                }
-                else
-                {
-                    return (404, null); 
-                }
-            }
-            catch (Exception ex)
-            {
-                return (500, null);
-            }
-        }
-
-
-
-
-
-
-
         public string GenerateAccessToken(Taikhoan req)
         {
             var user = _auth.GetTaikhoan(req.Email, req.MatKhau);
@@ -113,11 +72,6 @@ namespace RepositoryPattern.Services
             var tokenlog = new JwtSecurityTokenHandler().WriteToken(token);
             return tokenlog;
         }
-
-
-
-
-
 
         public Taikhoan register(Taikhoan req)
         {

@@ -9,6 +9,7 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddHttpClient();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -50,7 +51,6 @@ builder.Services.AddScoped<AuthenFilter>();
 builder.Services.AddScoped<testFilter>();
 builder.Services.AddScoped<CommentFilter>();
 builder.Services.AddMvc().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_2_2);
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -61,12 +61,14 @@ if (app.Environment.IsDevelopment())
     app.UseDeveloperExceptionPage();
 
 }
+app.UseCors(options =>
+           options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
 app.UseAuthentication();
 
 app.UseAuthorization();
 
-app.UseCors(options =>
-           options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+
 app.MapControllers();
 
 app.Run();

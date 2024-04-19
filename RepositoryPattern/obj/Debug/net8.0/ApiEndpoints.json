@@ -1,22 +1,6 @@
 [
   {
     "ContainingType": "RepositoryPattern.Controllers.AuthensController",
-    "Method": "Login",
-    "RelativePath": "api/Authens/Login",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "req",
-        "Type": "RepositoryPattern.Models.Taikhoan",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RepositoryPattern.Controllers.AuthensController",
     "Method": "Refresh",
     "RelativePath": "api/Authens/refresh",
     "HttpMethod": "POST",
