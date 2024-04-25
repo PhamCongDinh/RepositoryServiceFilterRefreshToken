@@ -6,7 +6,7 @@ namespace RepositoryPattern.Models.Req
     {
         public int Id { get; set; }
         public string TenPhim { get; set; }
-        [FileExtensions(Extensions = "jpg,jpeg")]
+        //[FileExtensions(Extensions = "jpg,jpeg,png")]
         public IFormFile AnhPhim { get; set; }
         public DateTime NgayPhatHanh { get; set; }
         public string? ThoiLuongPhim { get; set; }
