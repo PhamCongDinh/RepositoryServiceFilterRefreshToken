@@ -25,7 +25,7 @@ namespace RepositoryPattern.Controllers
             var iduser = User.Claims.FirstOrDefault(x => x.Type == "userId");
 
             req.IdTk = Convert.ToInt32(iduser.Value);
-            
+
             _cmmtSe.newcmmt(req);
            // return new JsonResult(new {data=req });
            return Ok(new { message = "success", data = req });

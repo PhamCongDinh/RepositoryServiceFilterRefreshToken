@@ -31,7 +31,6 @@ namespace RepositoryPattern.Services
                 var token = new JwtSecurityToken(
                     issuer: config["Jwt:Iss"],
                     audience: config["Jwt:Aud"],
-                    //expires: DateTime.UtcNow.AddMinutes(1),
                     expires: DateTime.Now.AddSeconds(40),
 
                     claims: new[]

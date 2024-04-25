@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using RepositoryPattern.Models.Req;
 
 namespace RepositoryPattern.Models;
 
@@ -14,7 +15,9 @@ public partial class WebphimonlineContext : DbContext
         : base(options)
     {
     }
-
+    public virtual DbSet<FunctionSQL> Functions { get; set; }   
+    public virtual DbSet<product> products { get; set; }
+    public virtual DbSet<DanhSach> danhsach { get; set; }
     public virtual DbSet<Binhluan> Binhluans { get; set; }
 
     public virtual DbSet<Chitiethd> Chitiethds { get; set; }

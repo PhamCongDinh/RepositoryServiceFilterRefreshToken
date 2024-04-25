@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using RepositoryPattern.Filters;
 using RepositoryPattern.Models;
@@ -7,6 +8,18 @@ using RepositoryPattern.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+//var MyAllowSpecificOrigins = "_MyAllowSpecificOrigins";
+//builder.Services.AddCors(Options =>
+//{
+//    Options.AddPolicy(name: MyAllowSpecificOrigins,
+//        policy =>
+//        {
+//            policy.WithOrigins("http://localhost:5218");
+//        });
+//});
+
+
+
 
 // Add services to the container.
 builder.Services.AddHttpClient();
@@ -35,17 +48,24 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         };
     });
 
-builder.Services.AddScoped<IPhimRepository,PhimRepository>();
-builder.Services.AddScoped<IGenericRepository<Hangphim>,HangphimRepository>();
-builder.Services.AddScoped<IGenericRepository<Loaiphim>, LoaiPhimRepository>();
-builder.Services.AddScoped<IGenericRepository<Tapphim>, TapPhimRepository>();
+builder.Services.AddScoped<IPhimRepository, PhimRepository>();
+//builder.Services.AddScoped<IGenericRepository<Hangphim>,HangphimRepository>();
+//builder.Services.AddScoped<IGenericRepository<Loaiphim>, LoaiPhimRepository>();
+//builder.Services.AddScoped<IGenericRepository<Tapphim>, TapPhimRepository>();
 builder.Services.AddScoped<PhimService>();
 builder.Services.AddScoped<IAuthenRepository, AuthenRepository>();
 builder.Services.AddScoped<AuthenService>();
-builder.Services.AddScoped<IGenericRepository<Binhluan>, CommentsRepository>(); 
-builder.Services.AddScoped<CommentService>();   
-builder.Services.AddScoped<IGenericRepository<Danhgia>,ReviewRepository>();
-builder.Services.AddScoped<ReviewService>();
+//builder.Services.AddScoped<IGenericRepository<Binhluan>, CommentsRepository>(); 
+//builder.Services.AddScoped<CommentService>();   
+//builder.Services.AddScoped<IGenericRepository<Danhgia>,ReviewRepository>();
+//builder.Services.AddScoped<ReviewService>();
+
+builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+builder.Services.AddScoped(typeof(GenericService<>));
+
+
+//builder.Services.AddScoped<IGenericRepository<Binhluan>, GenericRepository<Binhluan>>();
+//builder.Services.AddScoped<GenericService<Binhluan>>();
 
 builder.Services.AddScoped<AuthenFilter>();
 builder.Services.AddScoped<testFilter>();

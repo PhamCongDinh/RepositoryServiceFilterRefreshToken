@@ -32,7 +32,7 @@ namespace RepositoryPattern.Controllers
 
         [HttpPost]
         [Route("on_checkout")]
-        public async Task<IActionResult> OnCheckout([FromBody] Taikhoan req)
+        public async Task<IActionResult> OnCheckout()
         {
             // Check if the user already exists
             // Implement the logic to check if the user exists in your database
@@ -43,16 +43,14 @@ namespace RepositoryPattern.Controllers
             var secretKey = "at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa";
 
             // Map the request data to your model properties
-            var username = req.TenTk;
-            var email = req.Email;
-            var password = req.MatKhau;
+            
             var orderInfo = "Thanh toán tài khoản";
             var amount = "10000";
 
             var orderId = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString();
             var redirectUrl = "http://127.0.0.1:5500/authen/thanks.html";
             var ipnUrl = "http://127.0.0.1:5500/authen/thanks.html";
-            var extraData = new { username, password, email };
+            var extraData = "";
 
             var jsonExtraData = JsonConvert.SerializeObject(extraData);
             var requestId = DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString();

@@ -52,12 +52,16 @@ namespace RepositoryPattern.Controllers
             {
                 var imageName = req.AnhPhim.FileName;
                 var imagePath = Path.Combine("C:\\fpt\\QLwebphim\\Primeng\\src\\assets\\images", imageName);
+                
                 using (var stream = new FileStream(imagePath, FileMode.Create))
                 {
                     await req.AnhPhim.CopyToAsync(stream);
                 }
+                
                 phim.AnhPhim = imageName;
+                
             }
+
             pser.Create(phim);
 
             return Ok(new { message = "success", data = phim, status = 200 });
@@ -67,14 +71,14 @@ namespace RepositoryPattern.Controllers
 
 
         [HttpPut("updatephim")]
-        public ActionResult updateFilm(Phim phim)
+        public IActionResult updateFilm(Phim phim)
         {
             phimRepos.Update(phim);
             return Ok(new {message = "success", data = phim});
         }
 
         [HttpDelete("deletephim")]
-        public ActionResult deleteFilm(Phim phim)
+        public IActionResult deleteFilm(Phim phim)
         {
             phimRepos.Delete(phim);
             return Ok(new {message="success", data = phim});
